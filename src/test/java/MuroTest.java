@@ -52,7 +52,7 @@ public class MuroTest {
                 "No hay comentarios\n" +
                 "\n" +
                 "\n");
-        System.out.println(muro);
+        entrada01.mostrarAutorYMensaje();
     }
 
 }

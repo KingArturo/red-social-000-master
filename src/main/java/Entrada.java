@@ -62,4 +62,5 @@ public class Entrada {
     public ArrayList<String> getComentarios() {
         return comentarios;
     }
+
 }

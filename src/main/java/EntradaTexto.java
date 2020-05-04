@@ -74,4 +74,13 @@ public class EntradaTexto extends Entrada
 
         return aDevolver;
     }
+
+    /**
+     * Metodo que devuelve el autor y el mensaje
+     * cada uno en una linea
+     */
+    public void mostrarAutorYMensaje() {
+        System.out.println("Autor: " + getUsuario());
+        System.out.println("Mensaje: " + mensaje);
+    }
 }
