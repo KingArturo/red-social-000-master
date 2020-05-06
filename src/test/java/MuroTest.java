@@ -17,11 +17,15 @@ public class MuroTest {
         EntradaFoto entrada02 = new EntradaFoto("Luis", "https://bit.ly/2W1dO09", "Gracias");
         EntradaTexto entrada03 = new EntradaTexto("Begona", "Esta lloviendo ahi fuera...");
         EntradaFoto entrada04 = new EntradaFoto("Cristina", "https://bit.ly/3cY9vtD", "Una foto de mi nevera");
+        EntradaEvento entrada05 = new EntradaEvento("Arturo", "Ha actualizado su perfil");
+        EntradaEvento entrada06 = new EntradaEvento("Roberto", "Se ha unido ha el grupo de amigos de los animales");
 
         muro.addEntrada(entrada01);
         muro.addEntrada(entrada02);
         muro.addEntrada(entrada03);
         muro.addEntrada(entrada04);
+        muro.addEntrada(entrada05);
+        muro.addEntrada(entrada06);
         assertEquals(muro.toString(), "Usuario: Nacho\n" +
                 "Likes: 0\n" +
                 "Recien llegado de mis vacaciones en Hawai!\n" +
@@ -51,8 +55,19 @@ public class MuroTest {
                 "Escrito hace 10 segundos\n" +
                 "No hay comentarios\n" +
                 "\n" +
+                "\n" +
+                "Usuario: Arturo\n" +
+                "Likes: 0\n" +
+                "EventoHa actualizado su perfil\n" +
+                "Escrito hace 10 segundos\n" +
+                "\n" +
+                "\n" +
+                "Usuario: Roberto\n" +
+                "Likes: 0\n" +
+                "EventoSe ha unido ha el grupo de amigos de los animales\n" +
+                "Escrito hace 10 segundos\n" +
+                "\n" +
                 "\n");
-        System.out.println(muro.toString());
         entrada01.mostrarAutorYMensaje();
     }
 
