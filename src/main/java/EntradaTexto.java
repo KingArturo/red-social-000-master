@@ -16,6 +16,8 @@ public class EntradaTexto extends Entrada
 {
     // Contenido de la entrada.
     private String mensaje;
+    // Comentarios de la entrada.
+    private ArrayList<String> comentarios;
 
     /**
      * Constructor - Construye entradas a partir de un autor y un contenido.
@@ -27,6 +29,7 @@ public class EntradaTexto extends Entrada
     public EntradaTexto (String usuario, String texto) {
         super(usuario);
         mensaje = texto;
+        comentarios = new ArrayList<>();
     }
 
     /**
@@ -35,6 +38,14 @@ public class EntradaTexto extends Entrada
      */
     public String getMensaje() {
         return mensaje;
+    }
+
+    /**
+     * Anade un comentario a a la entrada.
+     * @param text El comentario a anadir.
+     */
+    public void addComentario(String text) {
+        comentarios.add(text);
     }
 
     /**
@@ -62,12 +73,12 @@ public class EntradaTexto extends Entrada
         aDevolver += "\n";
 
         // Comprobamos si hay comentarios. Si hay los mostramos, si no, mostramos un mensaje indicandolo.
-        if (getComentarios().size() == 0)         {
+        if (comentarios.size() == 0)         {
             aDevolver += "No hay comentarios\n";
         }
         else {
             aDevolver += "Comentarios: \n";
-            for(String comentarioActual : getComentarios()){
+            for(String comentarioActual : comentarios){
                 aDevolver += comentarioActual + "\n";
             }
         }

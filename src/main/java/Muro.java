@@ -10,34 +10,23 @@ import java.util.ArrayList;
  */
 public class Muro
 {
-    // Entradas de texto
-    private ArrayList <EntradaTexto> mensajes;
-    // Entradas con imagenes
-    private ArrayList <EntradaFoto> fotos;
+    // Entradas
+    private ArrayList<Entrada> entradas;
 
     /**
      * Constructor - Construye e inicializa un muro vacio.
      */
     public Muro() {
         //Inicializa mensajes y fotos.
-        mensajes = new ArrayList<>();
-        fotos = new ArrayList<>();
+        entradas = new ArrayList<>();
     }
 
     /**
-     * Anade una entrada de texto al muro.
-     * @param entrada La entrada de texto a anadir.
+     * Anade una entrada al muro.
+     * @param entrada La entrada a anadir.
      */
-    public void addEntradaTexto(EntradaTexto entrada) {
-        mensajes.add(entrada);
-    }
-
-    /**
-     * Anade una entrada de imagen al muro.
-     * @param entradaFoto La entrada de imagen a anadir.
-     */
-    public void addEntradaFoto(EntradaFoto entradaFoto) {
-        fotos.add(entradaFoto);
+    public void addEntrada(Entrada entrada) {
+        entradas.add(entrada);
     }
 
     /**
@@ -49,12 +38,7 @@ public class Muro
         String aDevolver = "";
 
         // Buscamos todas las entradas de texto.
-        for (EntradaTexto entrada : mensajes) {
-            aDevolver += entrada + "\n\n";
-        }
-
-        // Buscamos todas las entradas con foto.
-        for (EntradaFoto entrada : fotos) {
+        for (Entrada entrada : entradas) {
             aDevolver += entrada + "\n\n";
         }
 
