@@ -12,24 +12,20 @@ import java.time.temporal.ChronoUnit;
  *  @version 1.0
  */
 
-public class EntradaTexto extends Entrada
+public class EntradaTexto extends EntradaConComentario
 {
     // Contenido de la entrada.
     private String mensaje;
-    // Comentarios de la entrada.
-    private ArrayList<String> comentarios;
 
     /**
      * Constructor - Construye entradas a partir de un autor y un contenido.
      * Las entradas se crean sin ningun ' me gusta'.
      * La fecha de publicacion coincide con el momento en el que se crea la entrada.
-     * @param autor Autor de la entrada.
-     * @param mensaje Contenido de la entrada.
+     * @param texto Contenido de la entrada.
      */
     public EntradaTexto (String usuario, String texto) {
         super(usuario);
         mensaje = texto;
-        comentarios = new ArrayList<>();
     }
 
     /**
@@ -40,13 +36,7 @@ public class EntradaTexto extends Entrada
         return mensaje;
     }
 
-    /**
-     * Anade un comentario a a la entrada.
-     * @param text El comentario a anadir.
-     */
-    public void addComentario(String text) {
-        comentarios.add(text);
-    }
+
 
     /**
      * Devuelve una cadena con toda la informacion de la entrada.
@@ -71,18 +61,7 @@ public class EntradaTexto extends Entrada
             aDevolver += numeroSegundos + " segundos";
         }*/
         aDevolver += "\n";
-
-        // Comprobamos si hay comentarios. Si hay los mostramos, si no, mostramos un mensaje indicandolo.
-        if (comentarios.size() == 0)         {
-            aDevolver += "No hay comentarios\n";
-        }
-        else {
-            aDevolver += "Comentarios: \n";
-            for(String comentarioActual : comentarios){
-                aDevolver += comentarioActual + "\n";
-            }
-        }
-
+        aDevolver += getComentariosString();
         return aDevolver;
     }
 

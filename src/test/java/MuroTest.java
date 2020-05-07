@@ -68,6 +68,7 @@ public class MuroTest {
                 "Escrito hace 10 segundos\n" +
                 "\n" +
                 "\n");
+        //System.out.println(muro.toString());
         entrada01.mostrarAutorYMensaje();
     }
 

@@ -12,14 +12,12 @@ import java.time.temporal.ChronoUnit;
  *  @author DAM
  *  @version 1.0
  */
-public class EntradaFoto extends Entrada
+public class EntradaFoto extends EntradaConComentario
 {
     // URL de la imagen.
     private String urlImagen;
     //Título de la entrada.
     private String titulo;
-    // Comentarios de la entrada.
-    private ArrayList<String> comentarios;
 
     /**
      * Constructor - Construye entradas a partir de un autor, el titulo de la imagen y su URL.
@@ -33,7 +31,6 @@ public class EntradaFoto extends Entrada
         super(autor);
         urlImagen = url;
         this.titulo = titulo;
-        comentarios = new ArrayList<>();
     }
 
     /**
@@ -50,14 +47,6 @@ public class EntradaFoto extends Entrada
      */
     public String getTituloImagen() {
         return titulo;
-    }
-
-    /**
-     * Anade un comentario a a la entrada.
-     * @param text El comentario a anadir.
-     */
-    public void addComentario(String text) {
-        comentarios.add(text);
     }
 
     /**
@@ -84,18 +73,7 @@ public class EntradaFoto extends Entrada
             aDevolver += numeroSegundos + " segundos";
         }*/
         aDevolver += "\n";
-
-        // Comprobamos si hay comentarios. Si hay los mostramos, si no, mostramos un mensaje indicandolo.
-        if (comentarios.size() == 0) {
-            aDevolver += "No hay comentarios\n";
-        }
-        else {
-            aDevolver += "Comentarios: \n";
-            for (String comentarioActual : comentarios) {
-                aDevolver += comentarioActual + "\n";
-            }
-        }
-
+        aDevolver += getComentariosString();
         return aDevolver;
     }
 }
