@@ -45,23 +45,9 @@ public class EntradaTexto extends EntradaConComentario
     @Override
     public String toString() {
         String aDevolver = "";
-        aDevolver += "Usuario: " + getUsuario() + "\n";
-        aDevolver += "Likes: " + getCantidadMeGusta() + "\n";
+        aDevolver += super.toString();
         aDevolver += mensaje + "\n";
-
-        // Calculamos el numero de segundos que han pasado desde la fecha de publicacion.
-        long numeroSegundos = getMomentoPublicacion().until(LocalDateTime.now(), ChronoUnit.SECONDS);
-        aDevolver += "Escrito hace 10 segundos";
-
-        // Comprobamos si debemos expresar el tiempo en segundos o minutos.
-        /**if(numeroSegundos > 59){
-            aDevolver += numeroSegundos / 60 + " minutos";
-        }
-        else {
-            aDevolver += numeroSegundos + " segundos";
-        }*/
         aDevolver += "\n";
-        aDevolver += getComentariosString();
         return aDevolver;
     }
 

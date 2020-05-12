@@ -39,14 +39,8 @@ public class EntradaEvento extends Entrada {
     @Override
     public String toString() {
         String aDevolver = "";
-        aDevolver += "Usuario: " + getUsuario() + "\n";
-        aDevolver += "Likes: " + getCantidadMeGusta() + "\n";
-        aDevolver += "Evento" + evento + "\n";
-
-        // Calculamos el numero de segundos que han pasado desde la fecha de publicacion.
-        long numeroSegundos = getMomentoPublicacion().until(LocalDateTime.now(), ChronoUnit.SECONDS);
-        aDevolver += "Escrito hace 10 segundos";
-        aDevolver += "\n";
+        aDevolver += super.toString();
+        aDevolver += "Evento " + evento + "\n";
 
         return aDevolver;
     }

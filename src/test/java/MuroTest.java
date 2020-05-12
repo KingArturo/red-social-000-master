@@ -28,44 +28,48 @@ public class MuroTest {
         muro.addEntrada(entrada06);
         assertEquals(muro.toString(), "Usuario: Nacho\n" +
                 "Likes: 0\n" +
-                "Recien llegado de mis vacaciones en Hawai!\n" +
                 "Escrito hace 10 segundos\n" +
                 "No hay comentarios\n" +
+                "Recien llegado de mis vacaciones en Hawai!\n" +
+                "\n" +
                 "\n" +
                 "\n" +
                 "Usuario: Luis\n" +
                 "Likes: 0\n" +
-                "Url: https://bit.ly/2W1dO09\n" +
-                "Titulo: Gracias\n" +
                 "Escrito hace 10 segundos\n" +
                 "No hay comentarios\n" +
+                "Url: https://bit.ly/2W1dO09\n" +
+                "Titulo: Gracias\n" +
+                "\n" +
                 "\n" +
                 "\n" +
                 "Usuario: Begona\n" +
                 "Likes: 0\n" +
-                "Esta lloviendo ahi fuera...\n" +
                 "Escrito hace 10 segundos\n" +
                 "No hay comentarios\n" +
+                "Esta lloviendo ahi fuera...\n" +
+                "\n" +
                 "\n" +
                 "\n" +
                 "Usuario: Cristina\n" +
                 "Likes: 0\n" +
-                "Url: https://bit.ly/3cY9vtD\n" +
-                "Titulo: Una foto de mi nevera\n" +
                 "Escrito hace 10 segundos\n" +
                 "No hay comentarios\n" +
+                "Url: https://bit.ly/3cY9vtD\n" +
+                "Titulo: Una foto de mi nevera\n" +
+                "\n" +
                 "\n" +
                 "\n" +
                 "Usuario: Arturo\n" +
                 "Likes: 0\n" +
-                "EventoHa actualizado su perfil\n" +
                 "Escrito hace 10 segundos\n" +
+                "Evento Ha actualizado su perfil\n" +
                 "\n" +
                 "\n" +
                 "Usuario: Roberto\n" +
                 "Likes: 0\n" +
-                "EventoSe ha unido ha el grupo de amigos de los animales\n" +
                 "Escrito hace 10 segundos\n" +
+                "Evento Se ha unido ha el grupo de amigos de los animales\n" +
                 "\n" +
                 "\n");
         //System.out.println(muro.toString());

@@ -21,8 +21,10 @@ public class EntradaConComentario extends Entrada {
         comentarios.add(text);
     }
 
-    public String getComentariosString() {
+    @Override
+    public String toString() {
         String aDevolver = "";
+        aDevolver += super.toString();
         // Comprobamos si hay comentarios. Si hay los mostramos, si no, mostramos un mensaje indicandolo.
         if (comentarios.size() == 0)         {
             aDevolver += "No hay comentarios\n";
@@ -35,4 +37,5 @@ public class EntradaConComentario extends Entrada {
         }
         return aDevolver;
     }
+
 }
