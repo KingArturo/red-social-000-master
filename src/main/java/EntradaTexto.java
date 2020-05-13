@@ -59,4 +59,8 @@ public class EntradaTexto extends EntradaConComentario
         System.out.println("Autor: " + getUsuario());
         System.out.println("Mensaje: " + mensaje);
     }
+
+    public void mostrarDetallesPorPantalla() {
+        System.out.println(mensaje);
+    }
 }

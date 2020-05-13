@@ -55,5 +55,7 @@ public class Entrada {
         return cantidadMeGusta;
     }
 
+    public void mostrarDetallesPorPantalla() {
 
+    }
 }

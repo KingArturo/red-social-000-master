@@ -73,6 +73,8 @@ public class MuroTest {
                 "\n" +
                 "\n");
         //System.out.println(muro.toString());
+        //entrada01.mostrarDetallesPorPantalla();
+        muro.mostrarDetallesTodasLasEntradas();
         entrada01.mostrarAutorYMensaje();
     }
 

@@ -37,12 +37,21 @@ public class Muro
     public String toString() {
         String aDevolver = "";
 
-        // Buscamos todas las entradas de texto.
+        // Buscamos todas las entradas
         for (Entrada entrada : entradas) {
             aDevolver += entrada + "\n\n";
         }
 
         return aDevolver;
+    }
+
+    public void mostrarDetallesTodasLasEntradas() {
+
+        // Buscamos los detalles de las entradas.
+        for (Entrada entrada : entradas) {
+            entrada.mostrarDetallesPorPantalla();
+        }
+
     }
 }
 

@@ -44,4 +44,8 @@ public class EntradaEvento extends Entrada {
 
         return aDevolver;
     }
+
+    public void mostrarDetallesPorPantalla() {
+        System.out.println(evento);
+    }
 }
