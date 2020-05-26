@@ -53,5 +53,24 @@ public class Muro
         }
 
     }
+
+    /**
+     * Metodo que devuelve un array de String con la url
+     * de las entradas de tipo foto.
+     * @return
+     */
+    public String[] getUrlsFotos() {
+        int tamano = entradas.size();
+        String[] urls = new String[tamano];
+        int cont = 0;
+        for (Entrada entrada : entradas) {
+            if(entrada instanceof EntradaFoto) {
+                cont++;
+                EntradaFoto foto = (EntradaFoto)entrada;
+                urls[cont] = foto.getUrlImagen() + "\n";
+            }
+        }
+        return urls;
+    }
 }
 
